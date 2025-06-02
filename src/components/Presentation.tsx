@@ -360,12 +360,12 @@ export default function Presentation() {
                 <div className="text-2xl font-bold text-blue-700 text-center mb-6">学生们的AI网站作品：</div>
                 <div className="flex flex-row gap-8 justify-center items-center mb-2 flex-wrap">
                   <div className="flex flex-col items-center">
-                    <img src="src/mytraqr.png" alt="mytraqr demo" className="w-96 h-56 object-cover rounded-xl shadow-md border border-gray-200 mb-2" />
+                    <img src="/mytraqr.png" alt="mytraqr demo" className="w-96 h-56 object-cover rounded-xl shadow-md border border-gray-200 mb-2" />
                     <div className="text-lg text-gray-700 font-semibold">Peter的网站：AI分析高尔夫成绩</div>
                     <a href="https://mytraqr.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 text-base">mytraqr.com</a>
                   </div>
                   <div className="flex flex-col items-center">
-                    <img src="src/aloft.png" alt="aloft demo" className="w-96 h-56 object-cover rounded-xl shadow-md border border-gray-200 mb-2" />
+                    <img src="/aloft.png" alt="aloft demo" className="w-96 h-56 object-cover rounded-xl shadow-md border border-gray-200 mb-2" />
                     <div className="text-lg text-gray-700 font-semibold">Ivan的网站：AI推荐礼物选择</div>
                     <a href="https://aloft.gift" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 text-base">aloft.gift</a>
                   </div>
