@@ -15,7 +15,7 @@ export interface Slide {
   footer?: string;
 }
 
-export const slides: Slide[] = [
+export const slides_zh = [
   // 首页
   {
     type: 'title',
@@ -111,7 +111,6 @@ export const slides: Slide[] = [
     title: 'AI青少年教育实验分享',
     sections: [
       { type: 'text', content: '学AI要从娃娃抓起——AI激发好奇心，问题成为源动力', emphasis: true },
-      { type: 'text', content: '首先回答Peter的问题：' },
       { type: 'quote', content: 'Google这么牛，为什么没抢先做出比ChatGPT更好的产品？', align: 'right' },
       { type: 'text', content: '对于Peter的问题，Gemini是怎么回答的：' },
       { type: 'link', content: 'https://g.co/gemini/share/73200dcfdb96' },
@@ -133,20 +132,10 @@ export const slides: Slide[] = [
     title: '第一次作业：设计"难倒AI"的题目',
     sections: [
       { type: 'text', content: '要求：有唯一答案但AI容易出错', small: true },
-      { type: 'text', content: 'Jevon（逻辑悖论）：', emphasis: true },
-      { type: 'text', content: '四个中只有一个说真话，问是谁？' },
-      { type: 'list', content: [
-        'A：B说谎',
-        'B：C说谎',
-        'C：D说谎',
-        'D：A说谎',
-      ] },
-      { type: 'text', content: 'Peter（信息干扰）：', emphasis: true },
-      { type: 'text', content: '查理买了5个杯子蛋糕，鲍比吃了1个苹果。世界上剩下多少个苹果？' },
-      { type: 'text', content: 'Yuqiao（空间几何）：', emphasis: true },
-      { type: 'text', content: '房子每面墙都有窗户，早晨阳光照一扇，傍晚照相邻的一扇，太阳垂直运动，中午在重心上方。房子什么形状？' },
-      { type: 'text', content: 'Silvia（认知偏见）：', emphasis: true },
-      { type: 'text', content: '我父母是消防员和护士，护士（她）常来家长会，这次消防员来了，人们问为什么我爸从没来过。这个消防员是谁？' },
+      { type: 'text', content: 'Jevon（逻辑悖论）：四个中只有一个说真话，问是谁？  A：B说谎、B：C说谎、C：D说谎、D：A说谎', emphasis: true },
+      { type: 'text', content: 'Peter（信息干扰）：查理买了5个杯子蛋糕，鲍比吃了1个苹果。世界上剩下多少个苹果？', emphasis: true },
+      { type: 'text', content: 'Yuqiao（空间几何）：房子每面墙都有窗户，早晨阳光照一扇，傍晚照相邻的一扇，\n太阳垂直运动，中午在重心上方。房子什么形状？', emphasis: true },
+      { type: 'text', content: 'Silvia（认知偏见）：我父母是消防员和护士，护士（她）常来家长会，这次消防员来了，\n人们问为什么我爸从没来过。这个消防员是谁？', emphasis: true },
     ],
   },
   // 第八页
@@ -156,7 +145,6 @@ export const slides: Slide[] = [
     title: '第二次作业：构思问题，与AI对话，输出访谈文章',
     sections: [
       { type: 'text', content: '从对抗到协作的思维转变', emphasis: true },
-      { type: 'text', content: '四个学生的研究主题：' },
       { type: 'text', content: 'Peter（14岁）：《Claude Web Search功能对ChatGPT的威胁分析》', emphasis: true },
       { type: 'text', content: '→ 展现商业敏锐度和产品思维', small: true },
       { type: 'text', content: 'Jevon（17岁）：《AI对本体论的冲击》', emphasis: true },
@@ -189,23 +177,196 @@ export const slides: Slide[] = [
         '不是教孩子操作AI工具',
         '而是培养批判性思维和创造性思考',
       ] },
-      { type: 'text', content: '学生们的AI网站作品：', emphasis: true },
-      { type: 'text', content: 'Peter的网站：AI分析高尔夫成绩', small: true },
-      { type: 'link', content: 'https://mytraqr.com' },
-      { type: 'text', content: 'Ivan的网站：AI推荐礼物选择', small: true },
-      { type: 'link', content: 'https://aloft.gift' },
     ],
   },
   // 第十页
   {
     type: 'content',
     bgColor: 'bg-yellow-200',
-    title: '用AI激发好奇心',
+    title: '用AI激发好奇心，让问题成为源动力',
     sections: [
-      { type: 'text', content: '让问题成为原动力', emphasis: true },
       { type: 'text', content: 'Bee Alpha 实习营：', emphasis: true },
-      { type: 'link', content: 'bee.4zbot.com' },
+      { type: 'link', content: 'https://bee-alpha.com' },
+      { type: 'custom', content: 'student-works' },
       { type: 'text', content: '谢谢大家！', emphasis: true, align: 'center' },
+    ],
+  },
+];
+
+export const slides_en = [
+  // Page 1
+  {
+    type: 'title',
+    bgColor: 'bg-gradient-to-b from-yellow-100 to-white',
+    title: ["Three AI Pillars & Youth AI Education Experiment"],
+    subtitle: 'Speaker: Pin Zhou',
+    sections: [
+      { type: 'text', content: 'Founder of BeeBee AI' },
+      { type: 'text', content: 'Founder of Quwan Ltd' },
+      { type: 'text', content: 'Former management at Baidu/Cheetah Mobile' },
+      { type: 'text', content: '8 years of AI experience, one of the world\'s first GPT-era entrepreneurs' },
+    ],
+    footer: 'Date: May 27, 2025',
+  },
+  // Page 2
+  {
+    type: 'content',
+    bgColor: 'bg-blue-50',
+    title: 'Looking to the Future from the Foundation',
+    sections: [
+      { type: 'text', content: 'Today we talk about AI, not ChatGPT, nor Nvidia', emphasis: true },
+      { type: 'text', content: 'The entire progress of the AI world stems from Google\'s 2017 Transformer paper' },
+      { type: 'text', content: 'Like Einstein\'s E=MC², ChatGPT is Oppenheimer building the atomic bomb' },
+      { type: 'text', content: 'Google = Internet + Hardware + Software giant, fully capable of competing with OpenAI' },
+      { type: 'quote', content: 'Google is so strong, why didn\'t they launch a better product than ChatGPT first?', align: 'right' },
+    ],
+  },
+  // Page 3
+  {
+    type: 'content',
+    bgColor: 'bg-green-50',
+    title: "Google's First AI Pillar: AlphaGo (2016)",
+    sections: [
+      { type: 'text', content: "First demonstration of AI's 'autonomous learning' ability", emphasis: true },
+      { type: 'text', content: 'The historic moment of defeating Lee Sedol and Ke Jie' },
+      { type: 'link', content: 'https://www.youtube.com/watch?v=fGmUbdJfm0k' },
+      { type: 'text', content: 'Why start with Go?', emphasis: true },
+      { type: 'list', content: [
+        'Go is 10⁴³ times more complex than chess',
+        'Possible moves (10¹⁷⁰) exceed the number of atoms in the universe by 90 orders of magnitude',
+      ] },
+      { type: 'text', content: 'How did AlphaGo achieve this?', emphasis: true },
+      { type: 'list', content: [
+        'Not by programming every move',
+        'Learned by deep learning from tens of millions of Go games',
+      ] },
+      { type: 'text', content: 'Like teaching a child to ride a bike—practice to find balance', small: true },
+    ],
+  },
+  // Page 4
+  {
+    type: 'content',
+    bgColor: 'bg-purple-50',
+    title: "Google's Second AI Pillar: Transformer (2017)",
+    sections: [
+      { type: 'quote', content: '“Attention is all you need”', align: 'center' },
+      { type: 'text', content: 'Understanding the principle of Transformer technology:', emphasis: true },
+      { type: 'link', content: 'https://www.youtube.com/watch?v=xTj7D6OCLjI' },
+      { type: 'text', content: 'Why did the Physics Nobel Prize go to a computer scientist?', emphasis: true },
+      { type: 'link', content: 'https://www.youtube.com/watch?v=s4Z8ToalawY' },
+      { type: 'text', content: "If AlphaGo taught AI to 'learn', Transformer taught AI to 'understand language'" },
+      { type: 'text', content: 'Revolutionary impact of the attention mechanism:', emphasis: true },
+      { type: 'list', content: [
+        'From reading/writing one character at a time to reading/writing whole pages',
+        'Understanding which words are most important and the relationships between words',
+      ] },
+      { type: 'text', content: 'Practical applications: ChatGPT, Gemini, DeepSeek are all based on Transformer', small: true },
+    ],
+  },
+  // Page 5
+  {
+    type: 'content',
+    bgColor: 'bg-orange-50',
+    title: "Google's Third AI Pillar: AlphaFold2 (2021)",
+    sections: [
+      { type: 'text', content: 'AI scientist wins Nobel Prize in Biology', emphasis: true },
+      { type: 'text', content: 'Why did the Biology Prize go to computer scientist Demis Hassabis:' },
+      { type: 'link', content: 'https://zhuanlan.zhihu.com/p/2819747204' },
+      { type: 'text', content: 'AlphaFold2 increased human scientist efficiency by 187,000 times', emphasis: true },
+      { type: 'text', content: 'Breakthrough achievements:', emphasis: true },
+      { type: 'list', content: [
+        'Past half-century: humans resolved 50,000+ protein structures (17%)',
+        '2021: AlphaFold2 raised the ratio to 58%',
+        'Today: nearly 99.8%',
+      ] },
+      { type: 'text', content: 'Practical impact: directly accelerates new drug development and helps understand disease mechanisms', small: true },
+    ],
+  },
+  // Page 6
+  {
+    type: 'content',
+    bgColor: 'bg-pink-50',
+    title: 'Youth AI Education Experiment Sharing',
+    sections: [
+      { type: 'text', content: 'AI education should start from a young age—AI inspires curiosity, questions become motivation', emphasis: true },
+      { type: 'quote', content: 'Google is so strong, why didn\'t they launch a better product than ChatGPT first?', align: 'right' },
+      { type: 'text', content: 'How did Gemini answer Peter\'s question:' },
+      { type: 'link', content: 'https://g.co/gemini/share/73200dcfdb96' },
+      { type: 'text', content: 'Class composition:', emphasis: true },
+      { type: 'list', content: [
+        'Peter (14): keen business product sense',
+        'Jevon (17): deep philosophical thinking, good at abstraction',
+        'Yuqiao (17): science background, strong analytical skills',
+        'Silvia (25): adult learner, outstanding interdisciplinary integration',
+      ] },
+      { type: 'text', content: 'Educational goal:', emphasis: true },
+      { type: 'text', content: 'Not to teach kids to use AI, but to cultivate the ability to think collaboratively with AI', small: true },
+    ],
+  },
+  // Page 7
+  {
+    type: 'content',
+    bgColor: 'bg-yellow-50',
+    title: 'First Assignment: Design a Question to Stump AI',
+    sections: [
+      { type: 'text', content: 'Requirement: unique answer but easy for AI to get wrong', small: true },
+      { type: 'text', content: 'Jevon (logic paradox): Only one of four tells the truth. Who is it?  A: B is lying, B: C is lying, C: D is lying, D: A is lying', emphasis: true },
+      { type: 'text', content: 'Peter (information interference): Charlie bought 5 cupcakes, Bobby ate 1 apple. How many apples are left in the world?', emphasis: true },
+      { type: 'text', content: 'Yuqiao (spatial geometry): Each wall of the house has a window. In the morning, sunlight shines on one window, in the evening on the adjacent one.\nThe sun moves vertically, at noon it is above the center. What is the shape of the house?', emphasis: true },
+      { type: 'text', content: 'Silvia (cognitive bias): My parents are a firefighter and a nurse. The nurse (she) often attends parent meetings. This time the firefighter came,\npeople asked why my dad never came. Who is the firefighter?', emphasis: true },
+    ],
+  },
+  // Page 8
+  {
+    type: 'content',
+    bgColor: 'bg-green-100',
+    title: 'Second Assignment: Design Questions, Interview AI, Write an Article',
+    sections: [
+      { type: 'text', content: 'Shift from confrontation to collaboration', emphasis: true },
+      { type: 'text', content: 'Peter (14): "Analysis of Claude Web Search\'s Threat to ChatGPT"', emphasis: true },
+      { type: 'text', content: '→ Shows business acumen and product thinking', small: true },
+      { type: 'text', content: 'Jevon (17): "The Impact of AI on Ontology"', emphasis: true },
+      { type: 'text', content: '→ Reflects on the philosophical impact of AI on the nature of existence', small: true },
+      { type: 'text', content: 'Yuqiao (17): "Platform Governance Issues in AI Music"', emphasis: true },
+      { type: 'text', content: '→ Analyzes the game of recommendation rights, labeling rights, and revenue sharing', small: true },
+      { type: 'text', content: 'Silvia (25): "Auction House Actions and the AI Art Wave"', emphasis: true },
+      { type: 'text', content: '→ Interdisciplinary research at a professional level', small: true },
+    ],
+  },
+  // Page 9
+  {
+    type: 'content',
+    bgColor: 'bg-purple-100',
+    title: 'Core Teaching Philosophy: Three Shifts',
+    sections: [
+      { type: 'text', content: 'New direction for education in the AI era', emphasis: true },
+      { type: 'text', content: '1. From confrontation to collaboration', emphasis: true },
+      { type: 'list', content: [
+        'First: Can I stump AI? (exploring boundaries)',
+        'Second: Can I co-create with AI? (deep collaboration)',
+      ] },
+      { type: 'text', content: '2. From answers to questions', emphasis: true },
+      { type: 'list', content: [
+        'Traditional education: memorize standard answers',
+        'AI era: learn to ask good questions',
+      ] },
+      { type: 'text', content: '3. From skills to thinking', emphasis: true },
+      { type: 'list', content: [
+        'Not teaching kids to operate AI tools',
+        'But cultivating critical and creative thinking',
+      ] },
+    ],
+  },
+  // Page 10
+  {
+    type: 'content',
+    bgColor: 'bg-yellow-200',
+    title: 'Inspire Curiosity with AI, Let Questions Drive You',
+    sections: [
+      { type: 'text', content: 'Bee Alpha Internship Camp:', emphasis: true },
+      { type: 'link', content: 'https://bee-alpha.com' },
+      { type: 'custom', content: 'student-works' },
+      { type: 'text', content: 'Thank you all!', emphasis: true, align: 'center' },
     ],
   },
 ];
