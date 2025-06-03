@@ -143,7 +143,11 @@ export default function Presentation() {
         style={{ height: 'min(780px, 90vh)', minHeight: '400px', padding: '56px 16px', boxSizing: 'border-box' }}
       >
         {/* 幻灯片内容区 */}
-        <div className="w-full h-full flex flex-col justify-center items-center pt-10 pb-10 md:pt-16 md:pb-16 gap-4 md:gap-10">
+        <div className={
+          current === 0
+            ? "w-full h-full flex flex-col justify-start items-center pt-4 md:pt-8 pb-10 md:pb-16 gap-4 md:gap-10"
+            : "w-full h-full flex flex-col justify-center items-center pt-10 pb-10 md:pt-16 md:pb-16 gap-4 md:gap-10"
+        }>
           {/* 第10页主标题和副标题合并为一行 */}
           {current === 9 && slide.title && slide.sections && slide.sections[0] && slide.sections[0].type === 'text' && slide.sections[1] && slide.sections[1].type === 'text' ? (
             <div className="text-3xl md:text-5xl font-extrabold text-center mb-4 md:mb-8 tracking-tight leading-tight px-2 md:px-8">
@@ -170,20 +174,38 @@ export default function Presentation() {
             if (current === 9 && section.type === 'custom' && section.content === 'student-works') {
               return (
                 <div key={idx} className="w-full flex flex-col md:flex-row justify-center items-center gap-8 my-6">
-                  <div className="flex flex-col items-center w-full md:w-1/2">
-                    <img src={`${import.meta.env.BASE_URL}mytraqr.png`} alt="mytraqr demo" className="w-80 h-52 object-cover rounded-xl shadow-md border border-gray-200 mb-2" />
-                    <div className="text-lg text-gray-700 font-semibold">
+                  {/* Peter 缩略图 */}
+                  <a
+                    href="https://mytraqr.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex flex-col items-center w-full md:w-1/2 cursor-pointer select-none"
+                  >
+                    <img
+                      src={`${import.meta.env.BASE_URL}mytraqr.png`}
+                      alt="mytraqr demo"
+                      className="w-96 h-64 object-cover rounded-2xl shadow-[0_8px_32px_rgba(0,60,255,0.18),0_1.5px_8px_rgba(0,0,0,0.10)] border-4 border-white ring-4 ring-blue-200 group-hover:scale-105 group-hover:shadow-[0_16px_48px_rgba(0,60,255,0.28),0_3px_16px_rgba(0,0,0,0.18)] group-hover:ring-blue-400 transition-all duration-300 mb-2" />
+                    <div className="text-lg text-gray-700 font-semibold group-hover:text-blue-700">
                       {lang === 'zh' ? 'Peter的网站：AI分析高尔夫成绩' : "Peter's site: AI Golf Analysis"}
                     </div>
-                    <a href="https://mytraqr.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 text-base">mytraqr.com</a>
-                  </div>
-                  <div className="flex flex-col items-center w-full md:w-1/2">
-                    <img src={`${import.meta.env.BASE_URL}aloft.png`} alt="aloft demo" className="w-80 h-52 object-cover rounded-xl shadow-md border border-gray-200 mb-2" />
-                    <div className="text-lg text-gray-700 font-semibold">
+                    <div className="text-blue-600 underline hover:text-blue-800 text-base mt-1">mytraqr.com</div>
+                  </a>
+                  {/* Ivan 缩略图 */}
+                  <a
+                    href="https://aloft.gift"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex flex-col items-center w-full md:w-1/2 cursor-pointer select-none"
+                  >
+                    <img
+                      src={`${import.meta.env.BASE_URL}aloft.png`}
+                      alt="aloft demo"
+                      className="w-96 h-64 object-cover rounded-2xl shadow-[0_8px_32px_rgba(0,60,255,0.18),0_1.5px_8px_rgba(0,0,0,0.10)] border-4 border-white ring-4 ring-blue-200 group-hover:scale-105 group-hover:shadow-[0_16px_48px_rgba(0,60,255,0.28),0_3px_16px_rgba(0,0,0,0.18)] group-hover:ring-blue-400 transition-all duration-300 mb-2" />
+                    <div className="text-lg text-gray-700 font-semibold group-hover:text-blue-700">
                       {lang === 'zh' ? 'Ivan的网站：AI推荐礼物选择' : "Ivan's site: AI Gift Recommendation"}
                     </div>
-                    <a href="https://aloft.gift" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800 text-base">aloft.gift</a>
-                  </div>
+                    <div className="text-blue-600 underline hover:text-blue-800 text-base mt-1">aloft.gift</div>
+                  </a>
                 </div>
               );
             }
